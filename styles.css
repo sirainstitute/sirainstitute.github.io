@@ -20,6 +20,11 @@ nav a:hover {
   text-decoration: underline;
 }
 
+nav ul li {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400; /* or 600, etc., depending on the look you want */
+}
+
 main {
   padding: 2em;
 }
