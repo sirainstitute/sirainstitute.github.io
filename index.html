@@ -10,27 +10,27 @@
     body {
         display: flex;
         flex-direction: column;
-        min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+        min-height: 100vh; 
     }
 
     main {
-        flex-grow: 1; /* Allow main to take up available space */
+        flex-grow: 1; 
         display: flex;
         justify-content: center;
-        align-items: center;
-        padding: 20px; /* Add some padding around the image */
+        align-items: flex-start; /* Align items to the top */
+        padding: 20px; 
     }
     
     .image-container {
-      width: 95%; /* Adjust the width as needed */
-      max-width: 1200px; /* Set a maximum width if necessary */
+      width: 95%; 
+      max-width: 1200px;
       margin: 0 auto;
     }
 
     .image-container img {
-        width: 100%; /* Make the image responsive */
-        height: auto; /* Maintain aspect ratio */
-        display: block; /* Remove any extra space below the image */
+        width: 100%;
+        height: auto; 
+        display: block; 
         border-radius: 5px;
     }
   </style>
