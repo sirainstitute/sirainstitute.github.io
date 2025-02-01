@@ -2,11 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Seattle Institute for Robotics and AI</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap" />
+  <style>
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    }
 
+    main {
+        flex-grow: 1; /* Allow main to take up available space */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px; /* Add some padding around the image */
+    }
+    
+    .image-container {
+      width: 95%; /* Adjust the width as needed */
+      max-width: 1200px; /* Set a maximum width if necessary */
+      margin: 0 auto;
+    }
+
+    .image-container img {
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove any extra space below the image */
+        border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -15,21 +42,13 @@
       <a href="about.html">About Us</a>
       <a href="login.html">Login</a>
       <a href="login.html">Test2</a>
-      <!-- Add or remove items as needed -->
-    </nav>
+      </nav>
   </header>
 
   <main>
-    <section>
-      <h1>Welcome to the Seattle Institute for Robotics and AI</h1>
-      <p>
-        We are a student‐centered organization dedicated to fostering creativity,
-        collaboration, and hands‐on experience in emerging technologies. Our mission 
-        is to empower young minds to explore the rapidly evolving fields of robotics 
-        and artificial intelligence.
-      </p>
-      <!-- Feel free to include images or logos here -->
-    </section>
+    <div class="image-container">
+        <img src="sira-institute-single1.jpg" alt="Seattle Institute for Robotics and AI" />
+    </div>
   </main>
 
   <footer>
