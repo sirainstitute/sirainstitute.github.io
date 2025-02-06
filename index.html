@@ -6,52 +6,68 @@
   <title>Seattle Institute for Robotics and AI</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap" />
-  <style>
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; 
-    }
-
-    main {
-        flex-grow: 1; 
-        display: flex;
-        justify-content: center;
-        align-items: flex-start; /* Align items to the top */
-        padding: 20px; 
-    }
-    
-    .image-container {
-      width: 95%; 
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .image-container img {
-        width: 100%;
-        height: auto; 
-        display: block; 
-        border-radius: 5px;
-    }
-  </style>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
 </head>
 <body>
-  <header>
+
+<!-- Updated header with .top-bar and .green-strip -->
+<header>
+  <div class="top-bar">
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
-      <a href="login.html">Login</a>
-      </nav>
-  </header>
+    </nav>
+  </div>
+  <div class="green-strip"></div>
+</header>
 
-  <main>
-    <div class="image-container">
-        <img src="sira-institute-single1.jpg" alt="Seattle Institute for Robotics and AI" />
+<!-- MAIN GRID -->
+<main class="outer-grid">
+  <!-- Column 2: Logo -->
+  <div class="logo-area">
+    <img src="images/sirainstitute-logo.jpg" alt="Logo" class="logo" />
+  </div>
+
+  <!-- Column 3: Nested grid (two rows => row1: institute name, row2: text) -->
+  <div class="middle-content">
+    <div class="nested-grid">
+      <!-- Row 1: Institute Name -->
+      <div class="institute-name">
+        <h1>
+          <span class="seattle">Seattle</span>
+          <span class="institute">Institute</span>
+          <br/>
+          <span class="for-robotics">FOR ROBOTICS AND AI</span>
+        </h1>
+      </div>
+
+      <!-- Row 2: Text -->
+      <div class="description">
+        <p>
+          Welcome to the Seattle Institute for AI and Robotics (SIRA).
+          We are a student‐centered organization dedicated to fostering creativity,
+          collaboration, and hands‐on experience in emerging technologies.
+        </p>
+        <p>
+          Our mission is to empower young minds to explore the rapidly evolving
+          fields of robotics and artificial intelligence.
+        </p>
+      </div>
     </div>
-  </main>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 Seattle Institute for Robotics and AI</p>
-  </footer>
+  <!-- Column 5: Collage -->
+  <div class="collage-area">
+    <img
+            src="images/sirainstitute-landing.jpg"
+            alt="Collage of six images"
+            class="collage"
+    />
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2024 Seattle Institute for Robotics and AI</p>
+</footer>
 </body>
 </html>

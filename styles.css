@@ -1,41 +1,153 @@
-/* styles.css */
+/* Basic reset */
+* {
+  box-sizing: border-box;
+}
 
+/* Body font settings */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
-header {
+/* Dark top bar */
+.top-bar {
   background-color: #333;
-  padding: 1em;
-}
-
-nav a {
   color: #fff;
-  text-decoration: none;
-  margin-right: 1em;
-  font-family: 'Source Sans 3', sans-serif; /* Add this line */
-  font-weight: 400; /* Or 600, etc. */
+  padding: 1rem;
 }
 
-nav a:hover {
+/* Top bar navigation links */
+.top-bar nav a {
+  color: #fff;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400; /* Adjust as needed */
+}
+
+.top-bar nav a:hover {
   text-decoration: underline;
 }
 
-nav ul li {
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 400; /* or 600, etc., depending on the look you want */
+/* Thin green strip beneath the top bar */
+.green-strip {
+  background-color: #425f4c;
+  height: 0.5rem;
 }
 
-main {
-  padding: 2em;
+.content-container {
+  max-width: 800px;  /* or 1200px, etc. */
+  margin: 2rem auto; /* centers it horizontally, with top/bottom spacing */
+  padding: 0 1rem;   /* optional side padding so text isn’t slammed to edges */
 }
 
-footer {
-  background-color: #f2f2f2;
+
+
+/*
+  5-COLUMN GRID:
+  Col1 => 5% left spacer
+  Col2 => logo
+  Col3 => nested grid (title + text)
+  Col4 => spacer
+  Col5 => collage
+*/
+.outer-grid {
+  display: grid;
+  grid-template-columns: 5% auto auto auto auto;
+  column-gap: 1rem;
+  align-items: start;
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Column 2: Logo area */
+.logo-area {
+  grid-column: 2;
+}
+.logo {
+  display: block;
+  max-width: 120px;
+  height: auto;
+}
+
+/* Column 3: Nested grid (row1 => institute name, row2 => text) */
+.middle-content {
+  grid-column: 3;
+}
+.nested-grid {
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 1rem;
+}
+.institute-name h1 {
+  margin: 0;
+}
+.description p {
+  margin: 0.5rem 0;
+}
+
+/* Column 5: Collage */
+.collage-area {
+  grid-column: 5;
   text-align: center;
-  padding: 1em 0;
+}
+.collage {
+  max-width: 400px;
+  height: auto;
+}
+
+/* Footer styling */
+footer {
+  /*background-color: #f2f2f2;*/
+  text-align: center;
+  padding: 1rem;
+
+  /* Pin the footer to the bottom of the screen */
   position: fixed;
-  width: 100%;
   bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.institute-name h1 {
+  margin: 0;
+  line-height: 1; /* Tighter line spacing to reduce vertical gap */
+}
+
+.description {
+  margin-top: 1rem;      /* or 2rem, etc. */
+  /* padding-top: 1rem;  -- alternate approach if you prefer padding */
+}
+
+.seattle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600; /* bold */
+  font-size: 3rem;
+  margin-right: 0.2rem; /* small gap after “Seattle” */
+  line-height: 1;       /* matches h1 for minimal spacing */
+}
+
+.institute {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400; /* normal */
+  font-size: 3rem;
+  line-height: 1;   /* keeps “Seattle” and “Institute” on same tight line */
+}
+
+.for-robotics {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-top: 0;        /* removes extra spacing above the new line */
+  display: inline-block; /* ensures minimal line spacing after <br/> */
+  line-height: 1;       /* matches the tight spacing above */
+}
+
+.description p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem; /* adjust to your preference */
+  line-height: 1.3;  /* a comfortable line height */
+  margin: 0.5rem 0;  /* small vertical spacing between paragraphs */
 }
